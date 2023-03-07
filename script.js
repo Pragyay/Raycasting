@@ -24,20 +24,27 @@ ctx.fill();
 ctx.strokeStyle = "white";
 
 let b = new Boundary(700,200, 800, 400);
-b.draw();
 
-for(let angle = 0; angle <= Math.PI*2; angle += increment){
+update();
 
-    let ray = new Ray(source_pos_x, source_pos_y, r*Math.cos(angle), r*Math.sin(angle));
+function update(){
+    ctx.clearRect(0,0,width,height);
 
-    let inter = ray.intersect(b);
-    if(inter){
-        let r = new Ray(source_pos_x, source_pos_y, inter[0], inter[1]);
-        r.draw();
-    }else{
-        ray.draw(); 
-    }
+    b.draw();
+
+    for(let angle = 0; angle <= Math.PI*2; angle += increment){
+
+        let ray = new Ray(source_pos_x, source_pos_y, r*Math.cos(angle), r*Math.sin(angle));
     
+        let inter = ray.intersect(b);
+        if(inter){
+            let r = new Ray(source_pos_x, source_pos_y, inter[0], inter[1]);
+            r.draw();
+        }else{
+            ray.draw(); 
+        }
+    }
+    requestAnimationFrame(update);
 }
 
 

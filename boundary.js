@@ -5,8 +5,11 @@ class Boundary {
         this.x2 = x2;
         this.y2 = y2;
     }
+
+    // draws boundary from (x1, y1) to (x2, y2)
     draw() {
         ctx.beginPath();
+        ctx.strokeStyle = "white";
         ctx.lineWidth = 2;
         ctx.moveTo(this.x1, this.y1);
         ctx.lineTo(this.x2, this.y2);

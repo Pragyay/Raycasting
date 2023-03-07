@@ -10,5 +10,11 @@ Raycasting
 
 https://user-images.githubusercontent.com/53178739/223379910-69e162c3-d5b6-4a83-a955-9e2cd9c0cc23.mp4
 
+4) Add multiple walls/boundaries. Find the closest wall to a ray using the 'u' value calculated in intersect() function, if any, and render the ray till that point of intersection.
+
+https://user-images.githubusercontent.com/53178739/223513730-53676ff6-f5fa-4e32-8010-5d61523f631b.mp4
+
+
+
 
 
